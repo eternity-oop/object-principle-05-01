@@ -23,7 +23,6 @@ public class ScheduleTest {
     @Test
     public void to_json() throws JsonProcessingException, JSONException {
         Schedule schedule = new Schedule("월간회의", LocalTime.of(14, 0), Duration.ofHours(1), 2, DayOfWeek.MONDAY);
-        System.out.println(schedule.toJson());
         JSONAssert.assertEquals("""
                 {"title":"월간회의","from":"14:00","duration":60,"ordinal":2,"dayOfWeek":"MONDAY"}
                 """,
